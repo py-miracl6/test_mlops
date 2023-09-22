@@ -110,13 +110,15 @@ def make_predict(
 
 @app.post("/predict/", response_model=List[ClickResponse])
 def predict(request: AdOpportunity):
-    logger.debug("app/predict run")
-
     config_path = "configs/train_config.yaml"
+
+    logger.debug("appppp/predict run")
+
+    
     training_pipeline_params: TrainingPipelineParams = read_training_pipeline_params(
         config_path
     )
-    
+
     logger.debug(f"app/predict training_pipeline_params: {training_pipeline_params}")
 
     check_models(training_pipeline_params)
