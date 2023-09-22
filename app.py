@@ -23,6 +23,7 @@ handler = logging.StreamHandler(sys.stdout)
 logger.setLevel(logging.INFO)
 logger.addHandler(handler)
 
+# fvkfnv
 
 class AdOpportunity(BaseModel):
     data: list
@@ -115,6 +116,7 @@ def predict(request: AdOpportunity):
     training_pipeline_params: TrainingPipelineParams = read_training_pipeline_params(
         config_path
     )
+    
     logger.debug(f"app/predict training_pipeline_params: {training_pipeline_params}")
 
     check_models(training_pipeline_params)
