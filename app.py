@@ -112,7 +112,7 @@ def make_predict(
 def predict(request: AdOpportunity):
     config_path = "configs/train_config.yaml"
 
-    logger.debug("appppp/predict run")
+    logger.debug("app/predict run")
 
     
     training_pipeline_params: TrainingPipelineParams = read_training_pipeline_params(
